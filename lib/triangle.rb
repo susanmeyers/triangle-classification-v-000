@@ -4,14 +4,14 @@ class Triangle
   attr_accessor :s1, :s2, :s3
   
   def initialize(s1, s2, s3)
-    @s1 = s1
-    @s2 = s2
-    @s3 = s3
+    s1 = s1
+    s2 = s2
+    s3 = s3
   end
   
   def kind
     
-    if @s1*@s2*@s3 <= 0 || @s1 >= (@s2+@s3) || @s2 >= (@s1+@s3) || @s3 >= (@s1+@s2) 
+    if s1*s2*s3 <= 0 || s1 >= (s2+s3) || s2 >= (s1+s3) || s3 >= (s1+s2) 
     #if @side1 <= 0 || @side2 <= 0 || @side3 <= 0 || (@side1 + @side2) >= @side3 || (@side2 + @side3) >= @side1 || (@side3 + @side1) >= @side2
       
       begin
@@ -20,10 +20,10 @@ class Triangle
         end
     
       
-    elsif @s1 == @s2 && @s2 == @s3 
+    elsif s1 == s2 && s2 == s3 
       :equilateral
       
-    elsif @s1 == @s2 || @s1 == @s3 || @s2 == @s3
+    elsif s1 == @s2 || @s1 == @s3 || @s2 == @s3
       :isosceles
         
     else
